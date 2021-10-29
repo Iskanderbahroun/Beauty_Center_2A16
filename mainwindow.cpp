@@ -28,7 +28,9 @@ void MainWindow::on_pb_ajouter_clicked()
     int id=ui->le_id->text().toInt();
     int numtel=ui->le_numtel->text().toInt();
     QString nom=ui->le_nom->text();
-   Fournisseur F(id,numtel,nom);
+    QString qualite=ui->Le_qal->text();
+    QString category=ui->Le_cat->text();
+   Fournisseur F(id,numtel,nom,qualite,category);
    bool test=F.ajouter();
    QMessageBox msgBox;
    if(test)

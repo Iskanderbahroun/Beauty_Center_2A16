@@ -590,7 +590,7 @@ p, li { white-space: pre-wrap; }
      <string notr="true">background-color: rgb(68, 68, 68);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -723,10 +723,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>110</x>
         <y>70</y>
-        <width>521</width>
-        <height>281</height>
+        <width>551</width>
+        <height>311</height>
        </rect>
       </property>
       <property name="title">
@@ -792,6 +792,11 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
          <height>22</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+       </property>
       </widget>
       <widget class="QLineEdit" name="le_id">
        <property name="geometry">
@@ -801,6 +806,10 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
          <width>113</width>
          <height>22</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="le_numtel">
@@ -812,12 +821,16 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
          <height>22</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+       </property>
       </widget>
       <widget class="QPushButton" name="pb_ajouter">
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>210</y>
+         <y>220</y>
          <width>93</width>
          <height>28</height>
         </rect>
@@ -974,6 +987,68 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
         <string>ajouter</string>
        </property>
       </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(206, 197, 64);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
+       </property>
+       <property name="text">
+        <string>category</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Le_cat">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>140</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(206, 197, 64);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
+       </property>
+       <property name="text">
+        <string>Qualité du produit</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Le_qal">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>170</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QLabel" name="lb_img_ajt">
       <property name="geometry">
@@ -1015,10 +1090,10 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
      <widget class="QTableView" name="tabfournisseur">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>90</y>
-        <width>541</width>
-        <height>261</height>
+        <x>90</x>
+        <y>80</y>
+        <width>601</width>
+        <height>291</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1132,6 +1207,11 @@ color: rgb(206, 197, 64)
          <width>191</width>
          <height>22</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pb_supp">

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "Fournisseur.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +16,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_pb_ajouter_clicked();
+
+
+    void on_pb_supp_clicked();
+
 private:
     Ui::MainWindow *ui;
+    Fournisseur F;
 };
 #endif // MAINWINDOW_H

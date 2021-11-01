@@ -55,3 +55,31 @@ QSqlQueryModel* offre::afficher()
     return model;
 
 }
+/*bool offre::modifier(int code)
+{
+*/
+     /*QSqlQuery query;
+
+    int A=int(code);
+     query.prepare("UPDATE INTO offre SET code=:code, prix:=prix, type:=type WHERE code:=code");
+     query.bindValue(":code", code);
+     query.bindValue(":prix", prix);
+     query.bindValue(":type", type);
+       return query.exec();*/
+    bool offre::modifier(int code)
+      {
+          QSqlQuery query;
+          int res= int(code);
+
+          query.prepare("UPDATE offre SET code=:code, prix=:ssprix, type=:type WHERE code=:code");
+          query.bindValue(":code", code);
+          query.bindValue(":prix", prix);
+          query.bindValue(":type", type);
+
+
+          return    query.exec();
+     // }
+
+
+
+}

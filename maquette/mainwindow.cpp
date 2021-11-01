@@ -8,8 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->le_code->setValidator( new QIntValidator(0, 999, this));///accepte seulement les entiers
-    ui->le_prix->setValidator( new QIntValidator(0, 999, this));//il n'accepte pas les vergule pour les doubles
+    ui->le_code->setValidator( new QIntValidator(0, 99999999, this));///accepte seulement les entiers
+    ui->le_prix->setValidator( new QIntValidator(0, 99999999, this));//il n'accepte pas les vergule pour les doubles
     ui->tab_offre->setModel(o.afficher());
 }
 
@@ -55,5 +55,31 @@ void MainWindow::on_pb_supprimer_clicked()
         QMessageBox::critical(nullptr, QObject::tr("not OK"),
                                QObject::tr("Supprimer non effectué\n"
                                            "Click cancel to exit."), QMessageBox::Cancel );
+
+}
+
+void MainWindow::on_pb_modifier_clicked()
+{
+    int code=ui->le_code->text().toInt();
+    double prix=ui->le_prix->text().toDouble();
+    QString type=ui->le_type->text();
+
+
+
+        offre o(code,prix,type);
+
+
+         bool test=o.modifier(o.getcode());
+         if(test)
+       {  ui->tab_offre->setModel( o.afficher());//refresh
+       QMessageBox::information(nullptr, QObject::tr("Modifier un client"),
+                         QObject::tr("client modifiée.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+
+       }
+         else
+             QMessageBox::critical(nullptr, QObject::tr("Modifier un client"),
+                         QObject::tr("Erreur !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
 
 }

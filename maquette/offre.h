@@ -17,6 +17,7 @@ public:
     bool ajouter();
     QSqlQueryModel* afficher();///requette de type sql
     bool supprimer(int);
+    bool modifier(int code);
 private:
     int code;
     double prix;

@@ -22,6 +22,8 @@ private slots:
 
     void on_pb_supp_clicked();
 
+    void on_pb_modifier_clicked();
+
 private:
     Ui::MainWindow *ui;
     Fournisseur F;

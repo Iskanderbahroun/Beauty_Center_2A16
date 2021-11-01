@@ -60,3 +60,28 @@ void MainWindow::on_pb_supp_clicked()
     ui->tabfournisseur->setModel(F.afficher());
 
 }
+
+void MainWindow::on_pb_modifier_clicked()
+{
+    int id = ui->le_id_modif->text().toInt();
+     int numtel = ui->le_numtel_modif->text().toInt();
+       QString nom= ui->le_nom_modif->text();
+       QString qualite= ui->Le_qal_modif->text();
+       QString category =ui->Le_cat_modif->text();
+
+     Fournisseur F(id,numtel,nom,qualite,category);
+
+
+     bool test=F.modifier(id,numtel,nom,qualite,category);
+     if(test)
+   {ui->tabfournisseur->setModel(F.afficher());
+   QMessageBox::information(nullptr, QObject::tr("Modifier avec succées "),
+                     QObject::tr("invite modifiée.\n"
+                                 "Click ok to exit."), QMessageBox::Ok);
+
+   }
+     else
+         QMessageBox::critical(nullptr, QObject::tr("Modifier a echoué"),
+                     QObject::tr("Erreur !.\n"
+                                 "Click Cancel to exit."), QMessageBox::Cancel);
+}

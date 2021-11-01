@@ -55,6 +55,10 @@ QSqlQueryModel* Fournisseur::afficher(){
 bool Fournisseur::supprimer(int id){
       QSqlQuery query;
       QString res=QString::number(id);
+
+
+
+
     query.prepare("Delete from Fournisseur where id=:id");
     query.bindValue(":id", res);
 
@@ -62,4 +66,16 @@ bool Fournisseur::supprimer(int id){
 
 
 
+}
+bool Fournisseur::modifier(int id, int numtel, QString nom, QString qualite, QString category){
+    QSqlQuery query;
+     QString id_string= QString::number(id);
+     QString numtel_string= QString::number(numtel);
+       query.prepare(" UPDATE Fournisseur set id=:id ,numtel=:numtel,nom=:nom ,qualite=:qualite, category=:category  where id=:id");
+       query.bindValue(":id",id_string);
+       query.bindValue(":numtel",numtel_string);
+       query.bindValue(":nom",nom);
+       query.bindValue(":qualite",qualite);
+       query.bindValue(":category",category);
+       return query.exec();
 }

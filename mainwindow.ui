@@ -590,7 +590,7 @@ p, li { white-space: pre-wrap; }
      <string notr="true">background-color: rgb(68, 68, 68);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -1234,6 +1234,193 @@ background-color: rgb(255, 255, 255);</string>
      <zorder>label_13</zorder>
      <zorder>bg_supp</zorder>
      <zorder>groupBox_2</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>modifier</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>621</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>modifier</string>
+      </property>
+      <widget class="QLineEdit" name="le_numtel_modif">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>120</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>170</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(206, 197, 64);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
+       </property>
+       <property name="text">
+        <string>category</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>150</y>
+         <width>191</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(206, 197, 64);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
+       </property>
+       <property name="text">
+        <string>nom du fournisseur</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_id_modif">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>90</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>210</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(206, 197, 64);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
+       </property>
+       <property name="text">
+        <string>Qualité du produit</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>120</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(206, 197, 64);
+font: 75 11pt &quot;MS Shell Dlg 2&quot;; </string>
+       </property>
+       <property name="text">
+        <string>numéro du téléphone</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_nom_modif">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>150</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Le_cat_modif">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>180</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>90</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 11pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(206, 197, 64);</string>
+       </property>
+       <property name="text">
+        <string>identifiand du fournisseur</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Le_qal_modif">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>210</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_modifier">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>280</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>modifier</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
    <zorder>label</zorder>

@@ -1,6 +1,73 @@
+<<<<<<< HEAD
 --------------------------------------------------------
 --  File created - Tuesday-November-02-2021   
 --------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table CLIENT
+--------------------------------------------------------
+
+  CREATE TABLE "ISKANDER"."CLIENT" 
+   (	"NOM" VARCHAR2(20 BYTE), 
+	"PRENOM" VARCHAR2(20 BYTE), 
+	"AGE" VARCHAR2(20 BYTE), 
+	"ID" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table FOURNISSEUR
+--------------------------------------------------------
+=======
+--------------------------------------------------------
+--  File created - Tuesday-November-02-2021   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table EMPLOYES
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
+
+  CREATE TABLE "ISKANDER"."FOURNISSEUR" 
+   (	"ID" NUMBER, 
+	"NUMTEL" NUMBER(*,0), 
+	"NOM" VARCHAR2(20 BYTE), 
+	"QUALITE" VARCHAR2(20 BYTE), 
+	"CATEGORY" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+<<<<<<< HEAD
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table EMPLOYES
+--------------------------------------------------------
+
+  CREATE TABLE "ISKANDER"."EMPLOYES" 
+   (	"CIN" NUMBER, 
+	"NOM" VARCHAR2(20 BYTE), 
+	"PRENOM" VARCHAR2(20 BYTE), 
+	"AGE" NUMBER, 
+	"ROLE" VARCHAR2(20 BYTE), 
+	"SALAIRE" NUMBER
+=======
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table MATERIEL
+--------------------------------------------------------
+
+  CREATE TABLE "ISKANDER"."MATERIEL" 
+   (	"NOM" VARCHAR2(20 BYTE), 
+	"COULEUR" VARCHAR2(20 BYTE), 
+	"REFERENCE" NUMBER, 
+	"IDENTIFIANT" NUMBER
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
 --------------------------------------------------------
 --  DDL for Table CLIENT
 --------------------------------------------------------
@@ -25,36 +92,6 @@
 	"NOM" VARCHAR2(20 BYTE), 
 	"QUALITE" VARCHAR2(20 BYTE), 
 	"CATEGORY" VARCHAR2(20 BYTE)
-   ) SEGMENT CREATION IMMEDIATE 
-  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "SYSTEM" ;
---------------------------------------------------------
---  DDL for Table EMPLOYES
---------------------------------------------------------
-
-  CREATE TABLE "ISKANDER"."EMPLOYES" 
-   (	"CIN" NUMBER, 
-	"NOM" VARCHAR2(20 BYTE), 
-	"PRENOM" VARCHAR2(20 BYTE), 
-	"AGE" NUMBER, 
-	"ROLE" VARCHAR2(20 BYTE), 
-	"SALAIRE" NUMBER
-   ) SEGMENT CREATION IMMEDIATE 
-  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
-  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
-  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "SYSTEM" ;
---------------------------------------------------------
---  DDL for Table MATERIEL
---------------------------------------------------------
-
-  CREATE TABLE "ISKANDER"."MATERIEL" 
-   (	"NOM" VARCHAR2(20 BYTE), 
-	"COULEUR" VARCHAR2(20 BYTE), 
-	"REFERENCE" NUMBER, 
-	"IDENTIFIANT" NUMBER
    ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
@@ -91,10 +128,17 @@
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+<<<<<<< HEAD
   TABLESPACE "SYSTEM" ;
 --------------------------------------------------------
 --  DDL for Table UTILISER
 --------------------------------------------------------
+=======
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table UTILISER
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
 
   CREATE TABLE "ISKANDER"."UTILISER" 
    (	"CIN_C" VARCHAR2(20 BYTE), 
@@ -103,6 +147,7 @@
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+<<<<<<< HEAD
   TABLESPACE "SYSTEM" ;
 REM INSERTING into ISKANDER.CLIENT
 SET DEFINE OFF;
@@ -158,20 +203,85 @@ SET DEFINE OFF;
 --------------------------------------------------------
 --  DDL for Index OFFRE_PK
 --------------------------------------------------------
+=======
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into ISKANDER.EMPLOYES
+SET DEFINE OFF;
+REM INSERTING into ISKANDER.MATERIEL
+SET DEFINE OFF;
+REM INSERTING into ISKANDER.CLIENT
+SET DEFINE OFF;
+REM INSERTING into ISKANDER.FOURNISSEUR
+SET DEFINE OFF;
+Insert into ISKANDER.FOURNISSEUR (ID,NUMTEL,NOM,QUALITE,CATEGORY) values (123,57,'aassss','bbb','sssa');
+REM INSERTING into ISKANDER.OFFRE
+SET DEFINE OFF;
+REM INSERTING into ISKANDER.PRODUITCOSMETIQUE
+SET DEFINE OFF;
+REM INSERTING into ISKANDER.UTILISER
+SET DEFINE OFF;
+--------------------------------------------------------
+--  DDL for Index PK_EMPLOYES
+--------------------------------------------------------
 
-  CREATE UNIQUE INDEX "ISKANDER"."OFFRE_PK" ON "ISKANDER"."OFFRE" ("CODE") 
+  CREATE UNIQUE INDEX "ISKANDER"."PK_EMPLOYES" ON "ISKANDER"."EMPLOYES" ("CIN") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "SYSTEM" ;
 --------------------------------------------------------
+--  DDL for Index PK_MATERIEL
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "ISKANDER"."PK_MATERIEL" ON "ISKANDER"."MATERIEL" ("REFERENCE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_CLIENT
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "ISKANDER"."PK_CLIENT" ON "ISKANDER"."CLIENT" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index FOURNISSEUR_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "ISKANDER"."FOURNISSEUR_PK" ON "ISKANDER"."FOURNISSEUR" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index OFFRE_PK
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
+
+  CREATE UNIQUE INDEX "ISKANDER"."OFFRE_PK" ON "ISKANDER"."OFFRE" ("CODE") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+<<<<<<< HEAD
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
 --  DDL for Index PK_PRODUIT
 --------------------------------------------------------
+=======
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PK_PRODUIT
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
 
   CREATE UNIQUE INDEX "ISKANDER"."PK_PRODUIT" ON "ISKANDER"."PRODUITCOSMETIQUE" ("NUM") 
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+<<<<<<< HEAD
   TABLESPACE "SYSTEM" ;
 --------------------------------------------------------
 --  Constraints for Table CLIENT
@@ -199,6 +309,12 @@ SET DEFINE OFF;
 --------------------------------------------------------
 --  Constraints for Table EMPLOYES
 --------------------------------------------------------
+=======
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  Constraints for Table EMPLOYES
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
 
   ALTER TABLE "ISKANDER"."EMPLOYES" ADD CONSTRAINT "PK_EMPLOYES" PRIMARY KEY ("CIN")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
@@ -210,10 +326,17 @@ SET DEFINE OFF;
   ALTER TABLE "ISKANDER"."EMPLOYES" MODIFY ("AGE" NOT NULL ENABLE);
   ALTER TABLE "ISKANDER"."EMPLOYES" MODIFY ("PRENOM" NOT NULL ENABLE);
   ALTER TABLE "ISKANDER"."EMPLOYES" MODIFY ("NOM" NOT NULL ENABLE);
+<<<<<<< HEAD
   ALTER TABLE "ISKANDER"."EMPLOYES" MODIFY ("CIN" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table MATERIEL
 --------------------------------------------------------
+=======
+  ALTER TABLE "ISKANDER"."EMPLOYES" MODIFY ("CIN" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MATERIEL
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
 
   ALTER TABLE "ISKANDER"."MATERIEL" MODIFY ("IDENTIFIANT" NOT NULL ENABLE);
   ALTER TABLE "ISKANDER"."MATERIEL" ADD CONSTRAINT "PK_MATERIEL" PRIMARY KEY ("REFERENCE")
@@ -223,10 +346,40 @@ SET DEFINE OFF;
   TABLESPACE "SYSTEM"  ENABLE;
   ALTER TABLE "ISKANDER"."MATERIEL" MODIFY ("REFERENCE" NOT NULL ENABLE);
   ALTER TABLE "ISKANDER"."MATERIEL" MODIFY ("COULEUR" NOT NULL ENABLE);
+<<<<<<< HEAD
   ALTER TABLE "ISKANDER"."MATERIEL" MODIFY ("NOM" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table OFFRE
 --------------------------------------------------------
+=======
+  ALTER TABLE "ISKANDER"."MATERIEL" MODIFY ("NOM" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CLIENT
+--------------------------------------------------------
+
+  ALTER TABLE "ISKANDER"."CLIENT" ADD CONSTRAINT "PK_CLIENT" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table FOURNISSEUR
+--------------------------------------------------------
+
+  ALTER TABLE "ISKANDER"."FOURNISSEUR" ADD CONSTRAINT "FOURNISSEUR_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "ISKANDER"."FOURNISSEUR" MODIFY ("CATEGORY" NOT NULL ENABLE);
+  ALTER TABLE "ISKANDER"."FOURNISSEUR" MODIFY ("QUALITE" NOT NULL ENABLE);
+  ALTER TABLE "ISKANDER"."FOURNISSEUR" MODIFY ("NOM" NOT NULL ENABLE);
+  ALTER TABLE "ISKANDER"."FOURNISSEUR" MODIFY ("NUMTEL" NOT NULL ENABLE);
+  ALTER TABLE "ISKANDER"."FOURNISSEUR" MODIFY ("ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table OFFRE
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
 
   ALTER TABLE "ISKANDER"."OFFRE" ADD CONSTRAINT "OFFRE_PK" PRIMARY KEY ("CODE")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
@@ -236,10 +389,17 @@ SET DEFINE OFF;
   ALTER TABLE "ISKANDER"."OFFRE" MODIFY ("CIN_E" NOT NULL ENABLE);
   ALTER TABLE "ISKANDER"."OFFRE" MODIFY ("TYPE" NOT NULL ENABLE);
   ALTER TABLE "ISKANDER"."OFFRE" MODIFY ("PRIX" NOT NULL ENABLE);
+<<<<<<< HEAD
   ALTER TABLE "ISKANDER"."OFFRE" MODIFY ("CODE" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table PRODUITCOSMETIQUE
 --------------------------------------------------------
+=======
+  ALTER TABLE "ISKANDER"."OFFRE" MODIFY ("CODE" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table PRODUITCOSMETIQUE
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
 
   ALTER TABLE "ISKANDER"."PRODUITCOSMETIQUE" ADD CONSTRAINT "PK_PRODUIT" PRIMARY KEY ("NUM")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
@@ -253,6 +413,7 @@ SET DEFINE OFF;
   ALTER TABLE "ISKANDER"."PRODUITCOSMETIQUE" MODIFY ("NOM" NOT NULL ENABLE);
   ALTER TABLE "ISKANDER"."PRODUITCOSMETIQUE" MODIFY ("QUANTITÉ" NOT NULL ENABLE);
   ALTER TABLE "ISKANDER"."PRODUITCOSMETIQUE" MODIFY ("QRCODE" NOT NULL ENABLE);
+<<<<<<< HEAD
   ALTER TABLE "ISKANDER"."PRODUITCOSMETIQUE" MODIFY ("NUM" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table UTILISER
@@ -275,16 +436,51 @@ SET DEFINE OFF;
 --------------------------------------------------------
 --  Ref Constraints for Table PRODUITCOSMETIQUE
 --------------------------------------------------------
+=======
+  ALTER TABLE "ISKANDER"."PRODUITCOSMETIQUE" MODIFY ("NUM" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table UTILISER
+--------------------------------------------------------
+
+  ALTER TABLE "ISKANDER"."UTILISER" MODIFY ("CODE_OFFRE" NOT NULL ENABLE);
+  ALTER TABLE "ISKANDER"."UTILISER" MODIFY ("CIN_C" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table MATERIEL
+--------------------------------------------------------
+
+  ALTER TABLE "ISKANDER"."MATERIEL" ADD CONSTRAINT "FK_FOURNISSEUR" FOREIGN KEY ("IDENTIFIANT")
+	  REFERENCES "ISKANDER"."FOURNISSEUR" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table OFFRE
+--------------------------------------------------------
+
+  ALTER TABLE "ISKANDER"."OFFRE" ADD CONSTRAINT "FK_OFFRE" FOREIGN KEY ("CIN_E")
+	  REFERENCES "ISKANDER"."EMPLOYES" ("CIN") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table PRODUITCOSMETIQUE
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
 
   ALTER TABLE "ISKANDER"."PRODUITCOSMETIQUE" ADD CONSTRAINT "FK_EMP" FOREIGN KEY ("CIN_E")
 	  REFERENCES "ISKANDER"."EMPLOYES" ("CIN") ENABLE;
   ALTER TABLE "ISKANDER"."PRODUITCOSMETIQUE" ADD CONSTRAINT "FK_FOURNISSEUR2" FOREIGN KEY ("IDENTIFIANT")
+<<<<<<< HEAD
 	  REFERENCES "ISKANDER"."FOURNISSEUR" ("ID") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table UTILISER
 --------------------------------------------------------
+=======
+	  REFERENCES "ISKANDER"."FOURNISSEUR" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table UTILISER
+--------------------------------------------------------
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70
 
   ALTER TABLE "ISKANDER"."UTILISER" ADD CONSTRAINT "FK_CLIENT" FOREIGN KEY ("CIN_C")
 	  REFERENCES "ISKANDER"."CLIENT" ("ID") ENABLE;
   ALTER TABLE "ISKANDER"."UTILISER" ADD CONSTRAINT "FK_OFFREE" FOREIGN KEY ("CODE_OFFRE")
+<<<<<<< HEAD
 	  REFERENCES "ISKANDER"."OFFRE" ("CODE") ENABLE;
+=======
+	  REFERENCES "ISKANDER"."OFFRE" ("CODE") ENABLE;
+>>>>>>> 0e5a4ac968e1f89ca72ed2915ce511270c501a70

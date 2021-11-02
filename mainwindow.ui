@@ -590,7 +590,7 @@ p, li { white-space: pre-wrap; }
      <string notr="true">background-color: rgb(68, 68, 68);</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">

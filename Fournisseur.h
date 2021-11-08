@@ -2,6 +2,7 @@
 #define FOURNISSEUR_H
 #include <QString>
 #include<QSqlQueryModel>
+#include<QTableView>
 class Fournisseur{
 public:
     Fournisseur();
@@ -20,6 +21,11 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int);
     bool modifier(int,int,QString,QString,QString);
+    QSqlQueryModel* trinom();
+    QSqlQueryModel* triqual();
+    QSqlQueryModel* tricategory();
+    void recherche(QTableView * tabl, QString,QString,QString);
+
 
 private:
     QString nom,qualite,category;

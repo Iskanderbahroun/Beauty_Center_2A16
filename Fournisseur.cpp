@@ -79,3 +79,53 @@ bool Fournisseur::modifier(int id, int numtel, QString nom, QString qualite, QSt
        query.bindValue(":category",category);
        return query.exec();
 }
+QSqlQueryModel * Fournisseur::trinom()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM Fournisseur ORDER BY NOM");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("numtel"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("qualite"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("category"));
+
+    return model;
+}
+QSqlQueryModel * Fournisseur::triqual()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM Fournisseur ORDER BY QUALITE");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("numtel"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("qualite"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("category"));
+
+    return model;
+}
+QSqlQueryModel * Fournisseur::tricategory()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM Fournisseur ORDER BY CATEGORY");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("numtel"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("qualite"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("category"));
+
+    return model;
+}
+void Fournisseur :: recherche(QTableView * table ,QString nom, QString qualite,QString category )
+{
+    QSqlQueryModel *model= new QSqlQueryModel();
+
+    QSqlQuery *query=new QSqlQuery;
+    query->prepare("select * from Fournisseur where NOM like '%"+nom+"%' or QUALITE like '%"+qualite+"%' or CATEGORY like '%"+category+"%' ;");
+
+
+    query->exec();
+    model->setQuery(*query);
+    table->setModel(model);
+    table->show();
+
+}

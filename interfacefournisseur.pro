@@ -19,15 +19,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     Fournisseur.cpp \
     connection.cpp \
+    fournisseurs.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     Fournisseur.h \
     connection.h \
+    fournisseurs.h \
     mainwindow.h
 
 FORMS += \
+    fournisseurs.ui \
     mainwindow.ui
 
 # Default rules for deployment.

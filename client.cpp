@@ -17,43 +17,39 @@ this->prenom=prenom;
 this->age=age;
 this->id=id;
 }
-
-   int client::getage(){return age ;}
-  int client::getid(){return id;}
- QString client::getnom(){return nom ;}
-  QString client::getprenom(){return prenom ;}
-
-
-
-   void client:: setage(int age){this->age=age;}
-    void client::setid(int id){this->id=id;}
-    void client::setnom(QString nom){this->nom=nom;}
-    void client::setprenom(QString prenom){this->prenom=prenom;}
-    bool client::ajouter()
-    {
-        QSqlQuery query;
+int client::getage(){return age ;}
+int client::getid(){return id;}
+QString client::getnom(){return nom ;}
+QString client::getprenom(){return prenom ;}
+void client:: setage(int age){this->age=age;}
+void client::setid(int id){this->id=id;}
+void client::setnom(QString nom){this->nom=nom;}
+void client::setprenom(QString prenom){this->prenom=prenom;}
+bool client::ajouter()
+{
+    QSqlQuery query;
         QString id_string=QString::number(id);
          QString age_string=QString::number(age);
               query.prepare("INSERT INTO client (nom,prenom,age,id) "
                             "VALUES (:nom, :prenom,:age,:id)");
-              query.bindValue(":nom", nom);
-              query.bindValue(":prenom", prenom);
-              query.bindValue(":age", age_string);
-              query.bindValue(":id", id_string);
+              query.bindValue(":nom",nom);
+              query.bindValue(":prenom",prenom);
+              query.bindValue(":age",age_string);
+              query.bindValue(":id",id_string);
 
 
         return query.exec();
 
-    }
-bool client:: supprimer(int id)
+}
+bool client:: supprimer(QString nom)
 {
     QSqlQuery query;
 
-QString res=QString::number(id);
 
 
-          query.prepare("Delete from client where id=:id ");
-          query.bindValue(":id", res);
+
+          query.prepare("Delete from client where NOM=:NOM ");
+          query.bindValue(":NOM", nom);
 
     return query.exec();
 
@@ -76,5 +72,16 @@ model->setHeaderData(2, Qt::Horizontal, QObject::tr("AGE"));
 model->setHeaderData(3, Qt::Horizontal, QObject::tr("ID"));
 
     return model;
+}
+bool client::modifier(QString nom, QString prenom, int age, int id){
+      QSqlQuery query;
+    QString id_string=QString::number(id);
+     QString age_string=QString::number(age);
+          query.prepare("UPDATE client set nom=:nom , prenom=:prenom, age=:age, id=:id  where NOM=:nom");
+          query.bindValue(":nom", nom);
+          query.bindValue(":prenom", prenom);
+          query.bindValue(":age", age_string);
+          query.bindValue(":id", id_string);
+          return query.exec();
 }
 

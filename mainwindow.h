@@ -17,22 +17,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_ob_tri_clicked();
-
-    void on_ob_statistique_clicked();
-
-    void on_ob_excel_clicked();
-
-    void on_ob_cadeaux_clicked();
-
-    void on_ob_ajouterclient_clicked();
-
-    void on_ob_afficherclient_clicked();
-
-    void on_ob_modifierclient_clicked();
-
-    void on_ob_supprimerclient_clicked();
-    void on_pb_supprimer_clicked();
 
 private:
     Ui::MainWindow *ui;

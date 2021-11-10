@@ -18,7 +18,11 @@ public:
     void setprenom(QString);
     bool ajouter();
     QSqlQueryModel* afficher();
-    bool supprimer(int);
+    bool supprimer(QString);
+    bool modifier(QString,QString,int,int);
+    QSqlQueryModel * trinom();
+      QSqlQueryModel * triprenom();
+      QSqlQueryModel * triid();
 private :
     QString nom,prenom;
 

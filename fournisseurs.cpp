@@ -14,13 +14,14 @@ Fournisseurs::Fournisseurs(QWidget *parent) :
     ui(new Ui::Fournisseurs)
 {
     ui->setupUi(this);
-    ui->lb_img_ajt->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/background.jpg"));
+   // ui->lb_img_ajt->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/background.jpg"));
     ui->bg_home->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/background.jpg"));
     ui->bg_afficher->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/background.jpg"));
 
     ui->le_id->setValidator(new QIntValidator(0,99999999,this));
     ui->le_numtel->setValidator(new QIntValidator(0,999999999,this));
 ui->tabfournisseur->setModel(F.afficher());
+ui->tableView_email->setModel(F.afficheremail());
 
 ui->comboBox->setModel(F.afficher());
 }
@@ -38,7 +39,8 @@ void Fournisseurs::on_pb_ajouter_clicked()
     QString nom=ui->le_nom->text();
     QString qualite=ui->Le_qal->text();
     QString category =ui->Le_cat->text();
-   Fournisseur F(id,numtel,nom,qualite,category);
+    QString Email =ui->Le_email->text();
+   Fournisseur F(id,numtel,nom,qualite,category,Email);
    bool test=F.ajouter();
    QMessageBox msgBox;
    if(test){
@@ -84,11 +86,12 @@ void Fournisseurs::on_pb_modifier_clicked()
        QString nom= ui->le_nom->text();
        QString qualite= ui->Le_qal->text();
        QString category =ui->Le_cat->text();
+       QString Email =ui->Le_email->text();
 
-     Fournisseur F(id,numtel,nom,qualite,category);
+     Fournisseur F(id,numtel,nom,qualite,category,Email);
 
 
-     bool test=F.modifier(id,numtel,nom,qualite,category);
+     bool test=F.modifier(id,numtel,nom,qualite,category,Email);
      if(test)
    {ui->tabfournisseur->setModel(F.afficher());
          H.savemodifier();
@@ -125,6 +128,7 @@ void Fournisseurs::on_comboBox_activated(const QString &arg1)
                 ui->le_nom->setText(query.value(2).toString());
                 ui->Le_qal->setText(query.value(3).toString());
                 ui->Le_cat->setText(query.value(4).toString());
+                ui->Le_email->setText(query.value(5).toString());
 }}
             else
                 QMessageBox::critical(nullptr, QObject::tr(" echoué"),
@@ -165,3 +169,71 @@ void Fournisseurs::on_recher_edit_textChanged(const QString &arg1)
     }
     }
 }
+
+void Fournisseurs::on_pushButton_browse_email_clicked()
+{
+    files.clear();
+
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->lineEdit_atchmnt_email->setText( fileListString );
+}
+
+void Fournisseurs::on_pushButton_send_email_clicked()
+{
+    //    QSslConfiguration sslCfg = QSslConfiguration::defaultConfiguration();
+    //    QList<QSslCertificate> ca_list = sslCfg.caCertificates();
+    //    QList<QSslCertificate> ca_new = QSslCertificate::fromData("CaCertificates");
+    //    ca_list += ca_new;
+
+    //    sslCfg.setCaCertificates(ca_list);
+
+    //    sslCfg.setProtocol( QSsl::TlsV1SslV3 );
+
+    //    QSslConfiguration::setDefaultConfiguration(sslCfg);
+
+        qDebug() <<  "Loaded SSL Library version: " << QSslSocket::sslLibraryVersionString();
+
+        // ui->lineEdit_to_email->setText("email_ili_bch_tab3athlou@gmail.com");
+        // ui->lineEdit_from_email->setText("email_ili_bch_tab3ith_minou@gmail.com");
+        // ui->lineEdit_psswrd_email->setText("mdp mta3 l email ili bch tab3th minou");
+
+        // ui->lineEdit_subject_email->setText("test subject");
+        // ui->textEdit_email->setText("test text");
+
+        QString from = ui->lineEdit_from_email->text();
+        QString to = ui->lineEdit_to_email->text();
+        QString subject = ui->lineEdit_subject_email->text();
+        QString password = ui->lineEdit_psswrd_email->text();
+        QString email_text = ui->textEdit_email->toPlainText();
+
+        Smtp* smtp = new Smtp(from, password);
+        connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+        if( !files.isEmpty() )
+            smtp->sendMail(from, to, subject, email_text, files);
+        else
+            smtp->sendMail(from, to, subject, email_text);
+}
+void   Fournisseurs::mailSent(QString status)
+{
+
+    if(status == "Message sent")
+        QMessageBox::warning( nullptr, tr( "email" ), tr( "Message sent.\n\n" ) );
+    ui->lineEdit_to_email->clear();
+    ui->lineEdit_subject_email->clear();
+    ui->lineEdit_atchmnt_email->clear();
+    ui->textEdit_email->clear();
+    ui->lineEdit_psswrd_email->clear();
+}
+
+

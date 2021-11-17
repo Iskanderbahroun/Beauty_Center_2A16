@@ -5,6 +5,9 @@
 #include "QSqlQuery"
 #include "QStringListModel"
 #include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
+#include "historique.h"
 
 Fournisseurs::Fournisseurs(QWidget *parent) :
     QDialog(parent),
@@ -29,6 +32,7 @@ Fournisseurs::~Fournisseurs()
 
 void Fournisseurs::on_pb_ajouter_clicked()
 {
+
     int id=ui->le_id->text().toInt();
     int numtel=ui->le_numtel->text().toInt();
     QString nom=ui->le_nom->text();
@@ -37,14 +41,21 @@ void Fournisseurs::on_pb_ajouter_clicked()
    Fournisseur F(id,numtel,nom,qualite,category);
    bool test=F.ajouter();
    QMessageBox msgBox;
-   if(test)
+   if(test){
        msgBox.setText("ajout avec succes");
+      H.saveajouter();
 
+}
    else
        msgBox.setText("echec");
    msgBox.exec();
    ui->tabfournisseur->setModel(F.afficher());
 ui->comboBox->setModel(F.afficher());
+
+
+
+
+
 }
 
 
@@ -53,10 +64,11 @@ void Fournisseurs::on_pb_supp_clicked()
    int id =ui->comboBox->currentText().toInt();
     bool test=F.supprimer(id);
 
-    if(test)
+    if(test){
+        H.savesupp();
         QMessageBox::information(nullptr, QObject::tr("ok"),
                     QObject::tr("supression effectué .\n"
-                                "Click Ok to exit."), QMessageBox::Ok);
+                                "Click Ok to exit."), QMessageBox::Ok);}
     else
         QMessageBox::critical(nullptr, QObject::tr("not ok"),
                     QObject::tr("échec suprresion.\n"
@@ -79,6 +91,7 @@ void Fournisseurs::on_pb_modifier_clicked()
      bool test=F.modifier(id,numtel,nom,qualite,category);
      if(test)
    {ui->tabfournisseur->setModel(F.afficher());
+         H.savemodifier();
    QMessageBox::information(nullptr, QObject::tr("Modifier avec succées "),
                      QObject::tr("invite modifiée.\n"
                                  "Click ok to exit."), QMessageBox::Ok);

@@ -20,6 +20,7 @@ SOURCES += \
     Fournisseur.cpp \
     connection.cpp \
     fournisseurs.cpp \
+    historique.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -27,6 +28,7 @@ HEADERS += \
     Fournisseur.h \
     connection.h \
     fournisseurs.h \
+    historique.h \
     mainwindow.h
 
 FORMS += \

@@ -2,7 +2,7 @@
 #define FOURNISSEURS_H
 #include "Fournisseur.h"
 #include <QDialog>
-
+#include "historique.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {class Fournisseurs; }
 QT_END_NAMESPACE
@@ -40,6 +40,7 @@ private slots:
 private:
    Ui::Fournisseurs *ui;
     Fournisseur F;
+    Historique H;
 };
 
 #endif // FOURNISSEURS_H

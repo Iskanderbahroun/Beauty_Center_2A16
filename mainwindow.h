@@ -3,6 +3,8 @@
 #include"materiel.h"
 
 #include <QMainWindow>
+#include <QDialog>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,8 +30,42 @@ private slots:
 
     void on_Modifier_clicked();
 
+
+
+
+
+
+
+
+
+    void on_comboBox_activated(const QString &arg1);
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
+
+
+    void on_pushButton_6_clicked();
+
+    void on_le_reference_3_textChanged(const QString &arg1);
+
+    void on_pushButton_clicked();
+
+    void on_stock_btn_clicked();
+
+void on_comboBox_2_activated(const QString &arg1);
+
+
+
+    void on_pushButton_browse_email_clicked();
+
+    void on_pushButton_send_email_clicked();
+    void mailSent(QString);
+
 private:
     Ui::MainWindow *ui;
     Materiel M;
+    QStringList files;
 };
 #endif // MAINWINDOW_H

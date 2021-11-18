@@ -1,7 +1,5 @@
-QT       += core gui
-QT      +=sql
+QT       += core gui sql core network multimedia multimediawidgets serialport printsupport
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
@@ -20,12 +18,14 @@ SOURCES += \
     connexion.cpp \
     main.cpp \
     mainwindow.cpp \
-    materiel.cpp
+    materiel.cpp \
+    smtp.cpp
 
 HEADERS += \
     connexion.h \
     mainwindow.h \
-    materiel.h
+    materiel.h \
+    smtp.h
 
 FORMS += \
     mainwindow.ui

@@ -24,6 +24,7 @@ ui->tabfournisseur->setModel(F.afficher());
 ui->tableView_email->setModel(F.afficheremail());
 
 ui->comboBox->setModel(F.afficher());
+ui->comboBox_2->setModel(F.afficher());
 }
 
 Fournisseurs::~Fournisseurs()
@@ -40,7 +41,8 @@ void Fournisseurs::on_pb_ajouter_clicked()
     QString qualite=ui->Le_qal->text();
     QString category =ui->Le_cat->text();
     QString Email =ui->Le_email->text();
-   Fournisseur F(id,numtel,nom,qualite,category,Email);
+    QString adresse= ui->Le_adresse->text();
+   Fournisseur F(id,numtel,nom,qualite,category,Email,adresse);
    bool test=F.ajouter();
    QMessageBox msgBox;
    if(test){
@@ -87,11 +89,12 @@ void Fournisseurs::on_pb_modifier_clicked()
        QString qualite= ui->Le_qal->text();
        QString category =ui->Le_cat->text();
        QString Email =ui->Le_email->text();
+       QString adresse= ui->Le_adresse->text();
 
-     Fournisseur F(id,numtel,nom,qualite,category,Email);
+     Fournisseur F(id,numtel,nom,qualite,category,Email,adresse);
 
 
-     bool test=F.modifier(id,numtel,nom,qualite,category,Email);
+     bool test=F.modifier(id,numtel,nom,qualite,category,Email,adresse);
      if(test)
    {ui->tabfournisseur->setModel(F.afficher());
          H.savemodifier();
@@ -129,6 +132,7 @@ void Fournisseurs::on_comboBox_activated()
                 ui->Le_qal->setText(query.value(3).toString());
                 ui->Le_cat->setText(query.value(4).toString());
                 ui->Le_email->setText(query.value(5).toString());
+                ui->Le_adresse->setText(query.value(6).toString());
 }}
             else
                 QMessageBox::critical(nullptr, QObject::tr(" echoué"),
@@ -240,3 +244,93 @@ void   Fournisseurs::mailSent(QString status)
 }
 
 
+
+
+
+
+void Fournisseurs::on_comboBox_2_activated(const QString &arg1)
+{
+    int id = ui->comboBox_2->currentText().toInt();
+
+         QString id_string= QString::number(id);
+                QSqlQuery query;
+                query.prepare("select * from FOURNISSEUR where ID='"+id_string+"'");
+
+                if(query.exec()){
+
+                    while(query.next())
+                    { ui->textEdit->setText(query.value(6).toString());
+
+
+                        if  (ui->textEdit->toPlainText()== "tunis")
+                                    {ui->label_pic->clear();
+
+                              QPixmap pix("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/maps/tunis.png");
+                             int w = ui->label_pic->width();
+                             int h = ui->label_pic->height();
+                              ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+                          }
+
+                           else if(ui->textEdit->toPlainText()=="sousse")
+                             { ui->label_pic->clear();
+                                 QPixmap pix("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/maps/sousse.png");
+                                 int w = ui->label_pic->width();
+                                 int h = ui->label_pic->height();
+                                  ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+
+
+                             }
+                             else if(ui->textEdit->toPlainText()=="bizerte")
+                                {ui->label_pic->clear();
+                                    QPixmap pix("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/maps/bizerte.png");
+                                    int w = ui->label_pic->width();
+                                    int h = ui->label_pic->height();
+                                     ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+
+                                }
+                             else if(ui->textEdit->toPlainText()=="nabeul")
+                                {ui->label_pic->clear();
+                                    QPixmap pix("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/maps/nabeul.png");
+                                    int w = ui->label_pic->width();
+                                    int h = ui->label_pic->height();
+                                     ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+
+
+                                }
+                             else if(ui->textEdit->toPlainText()=="jendouba")
+                                {ui->label_pic->clear();
+                                    QPixmap pix("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/maps/jendouba.png");
+                                    int w = ui->label_pic->width();
+                                    int h = ui->label_pic->height();
+                                     ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+
+
+                                }
+                             else if(ui->textEdit->toPlainText()=="siliana")
+                                {ui->label_pic->clear();
+                                    QPixmap pix("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/maps/siliana.png");
+                                    int w = ui->label_pic->width();
+                                    int h = ui->label_pic->height();
+                                     ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+
+
+                                }
+                             else
+                             {
+                                 QMessageBox msgBox;
+
+                                        msgBox.setText("region inconnu");
+                                    msgBox.exec();}
+
+
+
+
+
+
+
+
+                    }} else
+                    QMessageBox::critical(nullptr, QObject::tr(" echoué"),
+                                QObject::tr("Erreur !.\n"
+                                            "Click Cancel to exit."), QMessageBox::Cancel);
+}

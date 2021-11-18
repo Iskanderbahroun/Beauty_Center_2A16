@@ -29,3 +29,12 @@ une modification effectuer
 un ajout effectuer
 un ajout effectuer
 une modification effectuer
+un ajout effectuer
+une suppression effectuer
+un ajout effectuer
+une suppression effectuer
+un ajout effectuer
+un ajout effectuer
+un ajout effectuer
+une modification effectuer
+une modification effectuer

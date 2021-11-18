@@ -40,6 +40,12 @@ private slots:
 
     void on_pushButton_send_email_clicked();
     void mailSent(QString);
+
+
+
+
+    void on_comboBox_2_activated(const QString &arg1);
+
 private:
    Ui::Fournisseurs *ui;
     Fournisseur F;

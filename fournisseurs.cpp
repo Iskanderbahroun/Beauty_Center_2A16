@@ -14,9 +14,9 @@ Fournisseurs::Fournisseurs(QWidget *parent) :
     ui(new Ui::Fournisseurs)
 {
     ui->setupUi(this);
-   // ui->lb_img_ajt->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/background.jpg"));
-    ui->bg_home->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/background.jpg"));
-    ui->bg_afficher->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/background.jpg"));
+    ui->ges_label_logo->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/log.png"));
+    ui->labellogo->setPixmap(QPixmap("C:/Users/Iskander/Documents/work/QT/Project/interfacefournisseur/log.png"));
+
 
     ui->le_id->setValidator(new QIntValidator(0,99999999,this));
     ui->le_numtel->setValidator(new QIntValidator(0,999999999,this));
@@ -111,7 +111,7 @@ void Fournisseurs::on_pb_modifier_clicked()
 
 
 
-void Fournisseurs::on_comboBox_activated(const QString &arg1)
+void Fournisseurs::on_comboBox_activated()
 {
     int id = ui->comboBox->currentText().toInt();
      QString id_string= QString::number(id);
@@ -140,19 +140,22 @@ void Fournisseurs::on_comboBox_activated(const QString &arg1)
 void Fournisseurs::on_trie_ref_clicked()
 {
  ui->tabfournisseur->setModel(F.trinom());
+
 }
 
 void Fournisseurs::on_trie_cat_clicked()
 {
     ui->tabfournisseur->setModel(F.tricategory());
+
 }
 
 void Fournisseurs::on_trie_qual_clicked()
 {
     ui->tabfournisseur->setModel(F.triqual());
+
 }
 
-void Fournisseurs::on_recher_edit_textChanged(const QString &arg1)
+void Fournisseurs::on_recher_edit_textChanged()
 {
 
     {
@@ -161,8 +164,8 @@ void Fournisseurs::on_recher_edit_textChanged(const QString &arg1)
 
     QString nom = ui->recher_edit->text();
      QString qualite = ui->recher_edit->text();
-      QString category = ui->recher_edit->text();
-    F.recherche(ui->tabfournisseur,nom,qualite,category);
+      int id = ui->recher_edit->text().toInt();
+    F.recherche(ui->tabfournisseur,nom,qualite,id);
     if (ui->recher_edit->text().isEmpty())
     {
        ui->tabfournisseur->setModel(F.afficher());

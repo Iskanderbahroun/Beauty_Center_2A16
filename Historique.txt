@@ -26,3 +26,6 @@ une suppression effectuer
 une suppression effectuer
 une modification effectuer
 une modification effectuer
+un ajout effectuer
+un ajout effectuer
+une modification effectuer

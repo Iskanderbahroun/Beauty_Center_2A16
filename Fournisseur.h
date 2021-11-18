@@ -27,7 +27,7 @@ public:
     QSqlQueryModel* trinom();
     QSqlQueryModel* triqual();
     QSqlQueryModel* tricategory();
-    void recherche(QTableView * tabl, QString,QString,QString);
+    void recherche(QTableView * tabl, QString,QString,int);
 
 
 private:

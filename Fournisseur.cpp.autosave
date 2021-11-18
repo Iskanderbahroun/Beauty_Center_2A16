@@ -94,12 +94,7 @@ QSqlQueryModel * Fournisseur::trinom()
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     model->setQuery("SELECT * FROM Fournisseur ORDER BY NOM");
-    /*model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("numtel"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("qualite"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("category"));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("email"));*/
+    
 
 
     return model;
@@ -108,12 +103,7 @@ QSqlQueryModel * Fournisseur::triqual()
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     model->setQuery("SELECT * FROM Fournisseur ORDER BY QUALITE");
-    /*model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("numtel"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("qualite"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("category"));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("email"));*/
+    
 
     return model;
 }
@@ -121,12 +111,7 @@ QSqlQueryModel * Fournisseur::tricategory()
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     model->setQuery("SELECT * FROM Fournisseur ORDER BY CATEGORY");
-   /* model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("numtel"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("qualite"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("category"));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("email"));*/
+  
 
     return model;
 }

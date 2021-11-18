@@ -100,7 +100,7 @@ font: 22pt &quot;Palatino Linotype&quot;;
       </rect>
      </property>
      <property name="text">
-      <string>Identifiant :</string>
+      <string>User:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -113,10 +113,10 @@ font: 22pt &quot;Palatino Linotype&quot;;
       </rect>
      </property>
      <property name="text">
-      <string>Mot de passe : </string>
+      <string>password:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="lineEdit_username">
      <property name="geometry">
       <rect>
        <x>300</x>
@@ -126,10 +126,11 @@ font: 22pt &quot;Palatino Linotype&quot;;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(206, 197, 64);</string>
+      <string notr="true">background-color: rgb(206, 197, 64);
+color: rgb(0, 0, 0);</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="lineEdit_password">
      <property name="geometry">
       <rect>
        <x>300</x>
@@ -139,7 +140,21 @@ font: 22pt &quot;Palatino Linotype&quot;;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(206, 197, 64);</string>
+      <string notr="true">background-color: rgb(206, 197, 64);
+color: rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="login">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>380</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Login</string>
      </property>
     </widget>
     <zorder>label_3</zorder>
@@ -147,14 +162,15 @@ font: 22pt &quot;Palatino Linotype&quot;;
     <zorder>label_2</zorder>
     <zorder>label_5</zorder>
     <zorder>label_6</zorder>
-    <zorder>lineEdit</zorder>
-    <zorder>lineEdit_2</zorder>
+    <zorder>lineEdit_username</zorder>
+    <zorder>lineEdit_password</zorder>
+    <zorder>login</zorder>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>20</x>
+      <y>20</y>
       <width>801</width>
       <height>571</height>
      </rect>

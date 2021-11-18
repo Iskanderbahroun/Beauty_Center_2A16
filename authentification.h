@@ -2,6 +2,16 @@
 #define AUTHENTIFICATION_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <employe.h>
+#include <QFileInfo>
+#include <mainwindow.h>
+
+
+
+
+
+
 
 namespace Ui {
 class Authentification;
@@ -15,8 +25,14 @@ public:
     explicit Authentification(QWidget *parent = nullptr);
     ~Authentification();
 
+private slots:
+
+
+    void on_login_clicked();
+
 private:
     Ui::Authentification *ui;
+    MainWindow *mainwindow;
 };
 
 #endif // AUTHENTIFICATION_H

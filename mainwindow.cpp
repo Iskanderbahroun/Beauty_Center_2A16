@@ -3,6 +3,8 @@
 #include "employe.h"
 #include <QMessageBox>
 #include <QIntValidator>
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -154,3 +156,15 @@ void MainWindow::on_rech_textChanged(const QString &arg1)
                ui->tab_employes->setModel(E.afficher());
             }
 }
+
+void MainWindow::on_export_pdf_clicked()
+{
+    {
+        E.telechargerPDF();
+
+         QMessageBox::information(nullptr,QObject::tr("OK"),
+                    QObject::tr("Téléchargement terminé"), QMessageBox::Cancel);
+
+    }
+}
+

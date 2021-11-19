@@ -5,6 +5,8 @@
 #include<QSqlQuery>
 #include<QSqlQueryModel>
 #include<QTableView>
+#include <QPdfWriter>
+#include <QPainter>
 
 
 class Employe
@@ -34,6 +36,7 @@ public:
       QSqlQueryModel * triAge();
       QSqlQueryModel * triSalaire();
        void rechercher(QTableView * tabl,int,int,int);
+       void telechargerPDF();
 
 private:
     QString Nom , Prenom , Role  ;

@@ -41,7 +41,7 @@ private slots:
 
     void on_export_pdf_clicked();
 
-    void on_le_afficher_statistique_clicked();
+    
 
 private:
     Ui::MainWindow *ui;

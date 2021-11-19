@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql multimedia multimediawidgets widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,15 +19,21 @@ SOURCES += \
     connexion.cpp \
     main.cpp \
     mainwindow.cpp \
-    offre.cpp
+    offre.cpp \
+    statistique.cpp \
+    video.cpp
 
 HEADERS += \
     connexion.h \
     mainwindow.h \
-    offre.h
+    offre.h \
+    statistique.h \
+    video.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    statistique.ui \
+    video.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

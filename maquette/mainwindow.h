@@ -1,8 +1,11 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <QFileDialog>
 #include <QMainWindow>
 #include "offre.h"
+#include <QVBoxLayout>
+#include "statistique.h"
+#include "video.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -22,8 +25,30 @@ private slots:
 
     void on_pb_modifier_clicked();
 
+
+    void on_pb_chercher_code_clicked();
+
+    QString on_pb_image_clicked();
+
+    void on_pb_trier_code_clicked();
+
+    void on_pb_trier_prix_clicked();
+
+    void on_pb_trier_type_clicked();
+
+    void on_pb_chercher_prix_clicked();
+
+    void on_pb_chercher_type_clicked();
+
+    void on_pb_stat_clicked();
+
+    void on_pb_video_clicked();
+
 private:
     Ui::MainWindow *ui;
     offre o;
+    Statistique *statistique;
+    video *Video;
+
 };
 #endif // MAINWINDOW_H

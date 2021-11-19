@@ -4,6 +4,12 @@
 #include <QMessageBox>
 #include <QIntValidator>
 #include <QSqlQuery>
+#include "stat.h"
+#include "exportexcelobject.h"
+#include <QSqlQuery>
+#include <QtDebug>
+#include <QVariant>
+
 
 gestion_client::gestion_client(QWidget *parent) :
     QDialog(parent),
@@ -133,3 +139,40 @@ void gestion_client::on_comboBox_activated(const QString &arg1)
 
 
 
+
+
+void gestion_client::on_tri_nom_clicked()
+{
+      ui->tab_client1->setModel(C.trinom());
+
+
+
+}
+
+void gestion_client::on_tri_prenom_clicked()
+{
+    ui->tab_client1->setModel(C.triprenom());
+}
+
+void gestion_client::on_tri_age_clicked()
+{
+    ui->tab_client1->setModel(C.triage());
+
+}
+
+void gestion_client::on_lineEdit_2_textChanged(const QString &arg1)
+{
+    client C ;
+
+     QString nom = ui->lineEdit->text();
+   QString prenom = ui->lineEdit->text();
+
+
+        int age = ui->lineEdit->text().toInt();
+    C.recherche(ui->tab_client1,nom,prenom,age);
+
+        if (ui->lineEdit->text().isEmpty())
+        {
+            ui->tab_client1->setModel(C.afficher());
+        }
+}

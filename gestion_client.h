@@ -1,8 +1,9 @@
-#ifndef GESTION_CLIENT_H
+#define GESTION_CLIENT_H
 #define GESTION_CLIENT_H
 
 #include <QDialog>
 #include "client.h"
+
 
 namespace Ui {
 class gestion_client;
@@ -33,9 +34,20 @@ private slots:
 
     void on_comboBox_activated(const QString &arg1);
 
+    void on_radioButton_clicked();
+
+    void on_tri_nom_clicked();
+
+    void on_tri_prenom_clicked();
+
+    void on_tri_age_clicked();
+
+    void on_lineEdit_2_textChanged(const QString &arg1);
+
+    void on_export2Excel_clicked();
+
 private:
     Ui::gestion_client *ui;
-    client C;
+    client C ;
 };
 
-#endif // GESTION_CLIENT_H

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>client</class>
+ <widget class="QDialog" name="client">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>972</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::PreventContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">selection-color: rgb(255, 255, 255);
+
+selection-background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QTabWidget" name="impression_badges">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>941</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(202, 202, 202);
+</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>gestion joueur</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>56</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CIN</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>56</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>nom</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_cin">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>30</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_ajouter">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>290</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>ajouter</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_modifier">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>290</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>modifier</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_afficher">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>360</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>afficher</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>56</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>prenom</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>160</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TEL</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_nom">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>70</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_prenom">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>110</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_tel">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>160</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>200</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ADRESSE</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_adresse">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>200</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_importer">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>360</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>impoter photo</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-100</y>
+       <width>941</width>
+       <height>541</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(213, 255, 210);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../bb.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tab_client">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>70</y>
+       <width>451</width>
+       <height>321</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="export_pdf">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>420</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>exporter excel</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>270</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_supprimer">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>100</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>supprimer</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="trier_prenom">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>20</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>trier prenom</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="trier_annees">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>20</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>trier adresse</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>50</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>190</y>
+       <width>121</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 255, 205);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>726</x>
+       <y>50</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>rechercher :</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="tri_tel">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>20</y>
+       <width>83</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>trier tel</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="tri_freq">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>420</y>
+       <width>83</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>trier freq</string>
+     </property>
+    </widget>
+    <zorder>label_8</zorder>
+    <zorder>label</zorder>
+    <zorder>label_2</zorder>
+    <zorder>le_cin</zorder>
+    <zorder>pb_ajouter</zorder>
+    <zorder>pb_modifier</zorder>
+    <zorder>pb_afficher</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_4</zorder>
+    <zorder>le_nom</zorder>
+    <zorder>le_prenom</zorder>
+    <zorder>le_tel</zorder>
+    <zorder>label_5</zorder>
+    <zorder>le_adresse</zorder>
+    <zorder>pb_importer</zorder>
+    <zorder>tab_client</zorder>
+    <zorder>export_pdf</zorder>
+    <zorder>comboBox_2</zorder>
+    <zorder>pb_supprimer</zorder>
+    <zorder>trier_prenom</zorder>
+    <zorder>trier_annees</zorder>
+    <zorder>lineEdit_3</zorder>
+    <zorder>label_9</zorder>
+    <zorder>label_6</zorder>
+    <zorder>tri_tel</zorder>
+    <zorder>tri_freq</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Stat</string>
+    </attribute>
+    <widget class="QLabel" name="label_stat">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>50</y>
+       <width>721</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_stat">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>90</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Statestique</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

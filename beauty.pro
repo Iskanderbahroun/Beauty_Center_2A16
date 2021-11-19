@@ -1,5 +1,5 @@
-QT       += core gui charts
-QT += sql
+QT       += core gui sql printsupport charts
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -17,25 +17,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     client.cpp \
+    clientt.cpp \
     connection.cpp \
-    exportexcelobject.cpp \
-    gestion_client.cpp \
+    excelexporteur.cpp \
     main.cpp \
-    mainwindow.cpp \
-    stat.cpp
+
 
 HEADERS += \
     client.h \
-    connection.h \
-    exportexcelobject.h \
-    gestion_client.h \
-    mainwindow.h \
-    stat.h
+    clientt.h \
+    connection.h \ \
+    excelexporteur.h
+
 
 FORMS += \
-    gestion_client.ui \
-    mainWindow.ui \
-    stat.ui
+    client.ui \
+
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

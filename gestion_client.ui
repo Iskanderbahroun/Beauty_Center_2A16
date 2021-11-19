@@ -51,7 +51,7 @@ background-color: rgb(85, 255, 0);</string>
      <property name="geometry">
       <rect>
        <x>470</x>
-       <y>90</y>
+       <y>100</y>
        <width>91</width>
        <height>23</height>
       </rect>
@@ -64,7 +64,7 @@ background-color: rgb(0, 255, 0);</string>
       <string>STATISTIQUE</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="ob_excel">
+    <widget class="QPushButton" name="export2Excel">
      <property name="geometry">
       <rect>
        <x>470</x>
@@ -592,9 +592,58 @@ background-color: rgb(85, 255, 255);</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>30</y>
+       <y>100</y>
        <width>601</width>
-       <height>291</height>
+       <height>221</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="tri_prenom">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>30</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tri par prenom </string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="tri_age">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>30</y>
+       <width>83</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tri par age</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="tri_nom">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>83</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tri par nom</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>10</y>
+       <width>113</width>
+       <height>21</height>
       </rect>
      </property>
     </widget>

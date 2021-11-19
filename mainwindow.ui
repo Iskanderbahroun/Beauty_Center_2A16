@@ -6,120 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>450</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>600</width>
-    <height>450</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>600</width>
-    <height>450</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <property name="palette">
-    <palette>
-     <active>
-      <colorrole role="Base">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>255</red>
-         <green>255</green>
-         <blue>255</blue>
-        </color>
-       </brush>
-      </colorrole>
-      <colorrole role="Window">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>255</red>
-         <green>255</green>
-         <blue>0</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </active>
-     <inactive>
-      <colorrole role="Base">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>255</red>
-         <green>255</green>
-         <blue>255</blue>
-        </color>
-       </brush>
-      </colorrole>
-      <colorrole role="Window">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>255</red>
-         <green>255</green>
-         <blue>0</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </inactive>
-     <disabled>
-      <colorrole role="Base">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>255</red>
-         <green>255</green>
-         <blue>0</blue>
-        </color>
-       </brush>
-      </colorrole>
-      <colorrole role="Window">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>255</red>
-         <green>255</green>
-         <blue>0</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </disabled>
-    </palette>
-   </property>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>0</y>
-      <width>291</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../../Downloads/customer.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>600</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar"/>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>

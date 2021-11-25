@@ -59,7 +59,7 @@ void Statistique::paintEvent(QPaintEvent *)
     painter.drawPie(size, 16*(m+y), 16*z);
 
 
-painter.drawText(size,"  GREEN : manicure \n BLACK : cheveux \n YELLOW : visage ");
+painter.drawText(size," GREEN : manicure \n BLACK : cheveux \n YELLOW : visage ");
 
 
 }

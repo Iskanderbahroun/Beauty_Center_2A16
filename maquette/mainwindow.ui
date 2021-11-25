@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>919</width>
-    <height>610</height>
+    <height>658</height>
    </rect>
   </property>
   <property name="palette">
@@ -138,23 +138,23 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
+      <x>20</x>
+      <y>30</y>
       <width>881</width>
-      <height>551</height>
+      <height>571</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>MENU</string>
      </attribute>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>10</x>
         <y>0</y>
         <width>871</width>
         <height>531</height>
@@ -238,7 +238,7 @@
        <string>Consulter statistique des offres</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -483,7 +483,7 @@
      <attribute name="title">
       <string>Gerer les offres</string>
      </attribute>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1184,12 +1184,25 @@
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>510</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
       <string>Consulter les offres</string>
      </attribute>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1810,12 +1823,25 @@
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>510</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
       <string>Consulter statistique des offres</string>
      </attribute>
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1974,7 +2000,7 @@
        </font>
       </property>
       <property name="title">
-       <string>Les offres le plus demmandé</string>
+       <string>Les offres les plus demmandes</string>
       </property>
       <widget class="QPushButton" name="pb_stat">
        <property name="geometry">
@@ -1997,6 +2023,19 @@
         <string>Afficher le statistique</string>
        </property>
       </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>510</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
      </widget>
     </widget>
    </widget>

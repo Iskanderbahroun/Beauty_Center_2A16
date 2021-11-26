@@ -143,7 +143,7 @@ return model;
                           painter.setPen(Qt::red);
                           painter.setFont(QFont("Arial", 30));
                           painter.drawText(1100,1200,"LISTES DES EMPLOYES");
-                          painter.setPen(Qt::gray);
+                          painter.setPen(Qt::black);
                           painter.setFont(QFont("Arial",14));
                           painter.drawRect(100,100,7300,2600);
                           painter.drawRect(0,3000,9600,500);

@@ -3,13 +3,28 @@
 #include "employe.h"
 #include <QMessageBox>
 #include <QIntValidator>
+#include <QMediaPlayer>
+#include <QFileDialog>
+
+
 
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+ui->setupUi(this);
+    mMediaPlayer = new QMediaPlayer(this);
+
+    connect(mMediaPlayer,&QMediaPlayer::positionChanged, [&](quint64 pos)
+    {
+        ui->avance->setValue(pos);
+    });
+    connect(mMediaPlayer,&QMediaPlayer::durationChanged,[&](quint64 dur)
+    {
+        ui->avance->setMaximum(dur);
+    });
+
 ui->le_cin->setValidator( new QIntValidator(0,99999999, this) );
 ui->le_age->setValidator( new QIntValidator(0,99, this) );
 ui->le_salaire->setValidator( new QIntValidator(0,9999, this) );
@@ -168,3 +183,50 @@ void MainWindow::on_export_pdf_clicked()
     }
 }
 
+
+void MainWindow::on_abrir_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this,"Abrir");
+    if (filename.isEmpty())
+    {
+        return ;
+    }
+    mMediaPlayer->setMedia(QUrl::fromLocalFile(filename));
+
+    mMediaPlayer->setVolume(ui->volum->value());
+    on_play_clicked();
+}
+
+void MainWindow::on_play_clicked()
+{
+    mMediaPlayer->play();
+
+}
+
+void MainWindow::on_pause_clicked()
+{
+    mMediaPlayer->pause();
+
+}
+
+void MainWindow::on_stop_clicked()
+{
+    mMediaPlayer->stop();
+
+
+}
+void MainWindow::on_mute_clicked()
+{
+    if(ui->mute->text()=="Mute")
+    {mMediaPlayer->setMuted(true);
+        ui->mute->setText("Unmute");}
+    else
+    {mMediaPlayer->setMuted(false);
+        ui->mute->setText("Mute");}
+
+}
+
+void MainWindow::on_volum_valueChanged(int  value)
+{
+    mMediaPlayer->setVolume(value);
+}

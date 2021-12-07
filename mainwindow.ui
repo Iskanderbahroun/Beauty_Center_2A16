@@ -27,7 +27,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="pageAuth">
      <widget class="QGroupBox" name="groupBox">
@@ -2166,7 +2166,7 @@ color: rgb(206, 197, 64);</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
@@ -4033,6 +4033,160 @@ color: rgb(0, 0, 0);</string>
        <zorder>label_41</zorder>
        <zorder>retour_3offre</zorder>
       </widget>
+      <widget class="QWidget" name="tab_27">
+       <attribute name="title">
+        <string>empreinte</string>
+       </attribute>
+       <widget class="QLabel" name="label_91">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>-10</y>
+          <width>921</width>
+          <height>581</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="Resource.qrc">:/img/img/bg.jpg</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_on">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>320</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>ON</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labell_2">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>50</y>
+          <width>391</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_off">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>320</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>OFF</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labell">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>150</y>
+          <width>391</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>320</y>
+          <width>141</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Adobe Myungjo Std M</family>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+          <strikeout>true</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 247, 185);</string>
+        </property>
+        <property name="text">
+         <string>Boutton:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>160</y>
+          <width>201</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Adobe Myungjo Std M</family>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+          <strikeout>true</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 247, 185);</string>
+        </property>
+        <property name="text">
+         <string>Etat du porte :</string>
+        </property>
+       </widget>
+      </widget>
      </widget>
      <widget class="QPushButton" name="pb_deco4">
       <property name="geometry">
@@ -4100,7 +4254,7 @@ color: rgb(206, 197, 64);</string>
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_14">
        <attribute name="title">

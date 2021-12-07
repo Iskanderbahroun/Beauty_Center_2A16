@@ -7,6 +7,17 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    int ret=A1.connect_arduino(); // lancer la connexion à arduino
+    switch(ret){
+    case(0):qDebug()<< "arduino is available and connected to : "<< A1.getarduino_port_name();
+        break;
+    case(1):qDebug() << "arduino is available but not connected to :" <<A1.getarduino_port_name();
+       break;
+    case(-1):qDebug() << "arduino is not available";
+    }
+     QObject::connect(A1.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+
+
     ui->stackedWidget->setCurrentIndex(0);
     ui->Le_num7->setValidator(new QIntValidator(0,99999999,this));
        ui->Le_prix7->setValidator(new QIntValidator(0,999999999,this));
@@ -675,6 +686,35 @@ void MainWindow::on_pb_stat4_clicked()
     Statistique=new statistique(this);
     Statistique->show();
 }
+
+/*Arduino ibtihel &ghaith*/
+void MainWindow::update_label()
+{
+ data=A1.read_from_arduino();
+
+
+   if(data=="1")
+
+     ui->labell->setText("Porte ouvert");
+
+ else if (data=="0")
+     ui->labell->setText("Porte fermé ");
+ else if (data=="3")
+
+      ui->labell_2->setText("try again !!! ");
+}
+
+
+void MainWindow::on_pb_on_clicked()
+{
+    A1.write_to_arduino("1");
+}
+
+void MainWindow::on_pb_off_clicked()
+{
+    A1.write_to_arduino("0");
+}
+
 void MainWindow::on_pb_ajout_2_clicked()
 {  int Cin=ui->le_cin_2->text().toInt();
     QString nom=ui->le_nom_2->text();

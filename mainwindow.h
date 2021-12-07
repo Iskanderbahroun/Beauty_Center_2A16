@@ -19,6 +19,7 @@
 #include "client.h"
 #include "produitcosmetiques.h"
 #include "statistiques.h"
+#include "arduino.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -226,6 +227,13 @@ private slots:
       void on_gestion_offres_clicked();
 
       void on_pb_deco8_clicked();
+      /////////////arduino
+
+      void update_label();
+
+      void on_pb_on_clicked();
+
+      void on_pb_off_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -242,5 +250,9 @@ private:
      client c;
      ProduitsCosmetiques P;
  statistiques *Statistiques;
+
+ QByteArray data; // variable contenant les données reçues
+
+ Arduino A1; // objet temporaire
 };
 #endif // MAINWINDOW_H

@@ -19,6 +19,7 @@
 #include "client.h"
 #include "produitcosmetiques.h"
 #include "statistiques.h"
+#include "arduino.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -105,7 +106,7 @@ private slots:
       void on_trier_prenom5_clicked();
       void on_trier_annees5_clicked();
       void on_lineEdit_5_textChanged(const QString &arg1);
-      void on_export_pdf5_clicked();
+
       void on_tab_client_activated(const QModelIndex &index);
       void on_tri_tel5_clicked();
       void on_pushButton_stat5_clicked();
@@ -228,6 +229,15 @@ private slots:
 
       void on_export_pdf_5_clicked();
 
+
+      //*************ARDUINO CLIENT**********//
+      void update_label();   // slot permettant la mise à jour du label état de la lampe 1,
+      // ce slot est lancé à chaque réception d'un message de Arduino
+
+      void on_pushButton_clicked();
+
+      void on_pushButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     Fournisseur F;
@@ -243,5 +253,9 @@ private:
      client c;
      ProduitsCosmetiques P;
  statistiques *Statistiques;
+
+ QByteArray data; // variable contenant les données reçues
+
+ Arduino A; // objet temporaire
 };
 #endif // MAINWINDOW_H

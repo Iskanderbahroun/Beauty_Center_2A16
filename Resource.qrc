@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/ariana.png</file>
+        <file>img/beja.png</file>
+        <file>img/benarous.png</file>
+        <file>img/bg.jpg</file>
+        <file>img/bizerte.png</file>
+        <file>img/girl.png</file>
+        <file>img/Historique.txt</file>
+        <file>img/jendouba.png</file>
+        <file>img/kef.png</file>
+        <file>img/manouba.png</file>
+        <file>img/nabeul.png</file>
+        <file>img/siliana.png</file>
+        <file>img/sousse.png</file>
+        <file>img/tunis.png</file>
+        <file>img/zaghouane.png</file>
+    </qresource>
+</RCC>
